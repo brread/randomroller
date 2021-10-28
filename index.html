@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Game</title>
+    <meta charset="UTF-8" />
+    <script>
+      var c;
+      var d;
+      var rn;
+      var s;
+      let i = 0;
+      var msg = " ";
+      function f(c) {
+        for (let i = 0; i < c; i++) {
+          rn = Math.floor(Math.random() * 2 + 1);
+          if (rn == 1) {
+            rn = "Heads";
+          } else if ((rn = 2)) {
+            rn = "Tails";
+          }
+          msg += i + 1 + ": " + rn + "  ";
+        }
+        alert(msg);
+        msg = " ";
+      }
+      function r(d, s) {
+        for (let i = 0; i < d; i++) {
+          rn = Math.floor(Math.random() * s + 1);
+          msg += i + 1 + ": " + rn + "  ";
+        }
+        alert(msg);
+        msg = " ";
+      }
+
+      function choose() {
+        var a = prompt(
+          "Would you like to role dice or flip coins? Press 1 for dice and 2 for coins."
+        );
+        if (a == 1) {
+          d = prompt("How many dice would you like to roll?");
+          s = prompt("How many sides are on these dice?");
+          r(d, s);
+        } else if (a == 2) {
+          c = prompt("How many coins would you like to flip?");
+          f(c);
+        } else {
+          alert("You did not choose 1 or 2.");
+        }
+      }
+    </script>
+    <style>
+      div {
+        text-align: center;
+      }
+      #btn {
+        text-align: center;
+        width: 60px;
+        height: 30px;
+        color: black;
+        background-color: blue;
+        border-color: blue;
+        font-size: 20px;
+        border-radius: 3px;
+        margin-top: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="btn" onclick="choose();">Flip</button>
+    </div>
+  </body>
+</html>
