@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Random Game</title>
+    <title>Flip</title>
     <meta charset="UTF-8" />
     <script>
       var c;
@@ -52,7 +52,11 @@
           }
         } else if (a == 2) {
           c = prompt("How many coins would you like to flip?");
-          f(c);
+          if (isNumeric(c)) {
+            f(c);
+          } else {
+            alert("You did not enter a number.");
+          }
         } else {
           alert("You did not choose 1 or 2.");
         }
